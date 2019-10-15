@@ -1,5 +1,7 @@
 {
   "name": "miniProyecto",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

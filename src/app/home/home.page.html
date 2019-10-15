@@ -1,14 +1,35 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content color="light" padding>
+  <ion-grid >
+    <form >
+    <ion-row>
+      <ion-col>
+        <div text-center>
+          <h3>Reservación</h3>
+        </div>
+        <div padding>
+            <ion-item>
+                <ion-input type="name" placeholder="Name"></ion-input>
+              </ion-item>
+          <ion-item>
+            <ion-input type="email" placeholder="your email"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="CellPhone" placeholder="CellPhone"></ion-input>
+            </ion-item>
+            
+               <ion-item>
+                  <ion-label>Date</ion-label>
+                  <ion-datetime display-format="DD.MM.YYYY HH:mm"></ion-datetime>
+                </ion-item>
+              
+        </div>
+        <div padding>
+          <ion-button type="button"   size="large" expand="block">Reservar</ion-button>
+         
+        </div>
+      
+      </ion-col>
+    </ion-row>
+      </form>
+  </ion-grid>
 </ion-content>

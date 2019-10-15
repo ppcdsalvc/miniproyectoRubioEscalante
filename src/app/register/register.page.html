@@ -1,0 +1,71 @@
+
+<ion-content>
+  <ion-grid>
+    <form>
+      <ion-row>
+        <ion-col>
+        <div text-center>
+          <h3>Registro</h3>
+        </div>
+        <div padding>
+          <ion-item >
+            <ion-input type="text" placeholder="name complete"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="email" placeholder="your email"></ion-input>
+            </ion-item>
+          <ion-item>
+              <ion-input type="password" placeholder="password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" placeholder="repeat password"></ion-input>
+              </ion-item>
+        </div>
+        <div>
+          <ion-slides >
+            <ion-slide *ngFor="let f of figuras; index as i">
+                <ion-card >
+                    <img [src]="f.img" />
+                    <ion-card-header>
+                      <ion-card-subtitle>Valida que eres humano...</ion-card-subtitle>
+                      <ion-card-subtitle>Que animal se muestra en la imagen de arriba?</ion-card-subtitle>                     
+                    </ion-card-header>
+                    <ion-card-content>
+                      
+                    </ion-card-content>
+                    <div>
+                        <ion-grid>
+                            <ion-row>
+                              <ion-col>
+                                <ion-button (click)="validate(f.opc1,i)">{{f.opc1}}</ion-button>
+                              </ion-col>
+                              <ion-col>
+                                <ion-button (click)="validate(f.opc2,i)" >{{f.opc2}}</ion-button>
+                              </ion-col>
+                            </ion-row>
+                            <ion-row>
+                              <ion-col>
+                                <ion-button (click)="validate(f.opc3,i)" >{{f.opc3}}</ion-button>
+                              </ion-col>
+                              <ion-col>
+                                  <ion-button (click)="validate(f.opc4,i)" >{{f.opc4}}</ion-button>
+                                </ion-col>
+                            </ion-row>
+                          </ion-grid>
+                    </div>
+                  </ion-card>
+            </ion-slide>
+      
+          </ion-slides>
+        </div>
+        <div padding>
+          <ion-button size="large" expand="block" (click)="register()" > Register</ion-button>
+        </div>
+      </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+  <br>
+  <br>
+  <br>
+</ion-content>

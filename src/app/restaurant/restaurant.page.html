@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-slides padding>
+    <ion-slide *ngFor="let g of gallery">
+        <ion-card>
+            <ion-img  [src]="g.img"></ion-img>
+            <ion-card-header>
+              <ion-card-subtitle>{{g.subtitle}}</ion-card-subtitle>
+              <ion-card-title>{{g.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                {{g.content}}
+            </ion-card-content>
+            <ion-card-content>
+              <ion-button size="large" color="danger"  expand="block" routerLink="/home" >Reservar</ion-button>
+          </ion-card-content>
+          </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
